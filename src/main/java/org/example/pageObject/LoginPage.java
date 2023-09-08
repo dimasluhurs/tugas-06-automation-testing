@@ -15,38 +15,38 @@ public class LoginPage {
     }
 
     @FindBy(xpath = "//input[@id='user-name']")
-    private WebElement username;
+    private WebElement inputUsername;
 
     @FindBy(xpath = "//input[@id='password']")
-    private WebElement password;
+    private WebElement inputPassword;
 
     @FindBy(xpath = "//input[@id='login-button']")
-    private WebElement loginButton;
+    private WebElement buttonLogin;
 
     @FindBy(xpath = "//div[.='Sauce Labs Backpack']")
-    private WebElement validatingDashboard;
+    private WebElement sauceLabsBackpackItem;
 
     @FindBy(css = "h3")
     private WebElement errMsg;
 
+    public boolean verifyOnLoginPage(){
+        return inputUsername.isDisplayed();
+    }
+
     public void setUserName(String userName){
-        username.sendKeys(userName);
+        inputUsername.sendKeys(userName);
     }
 
     public void setPassword(String pwd){
-        password.sendKeys(pwd);
+        inputPassword.sendKeys(pwd);
     }
 
     public void clickButtonLogin(){
-        loginButton.click();
+        buttonLogin.click();
     }
 
-    public boolean loginIsSuccessfull(){
-        return validatingDashboard.isDisplayed();
-    }
-
-    public boolean verifyOnLoginPage(){
-        return username.isDisplayed();
+    public boolean loginIsSuccessful(){
+        return sauceLabsBackpackItem.isDisplayed();
     }
 
     public String loginIsError(){

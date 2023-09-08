@@ -28,7 +28,7 @@ public class CheckoutItemFromCart {
         checkoutAndCartPage.clickCheckout();
     }
 
-    @When("User filling {string} as firstName, {string} as lastName and {string} as postal code")
+    @And("User filling {string} as firstName, {string} as lastName and {string} as postal code")
     public void inputCredentials(String firstname, String lastname, String code) {
         checkoutAndCartPage.setFirstName(firstname);
         checkoutAndCartPage.setLastName(lastname);
@@ -40,7 +40,7 @@ public class CheckoutItemFromCart {
         checkoutAndCartPage.clickContinue();
     }
 
-    @When("User verifying item total and tax price")
+    @And("User verifying item total and tax price")
     public void verifyingPrice(){
         Float totalItemPrice = (Float.parseFloat(checkoutAndCartPage.getItemPrice().substring(13)) + Float.parseFloat(checkoutAndCartPage.getTaxPrice().substring(6)));
 

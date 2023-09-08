@@ -6,12 +6,13 @@ Feature: Cart Feature
   Scenario: Adding item to cart
     Given User already open the website sauce demo
     When User input "standard_user" as username "secret_sauce" as password
-    And User filter list product by value "za"
-    Then User clicking various of items into a cart
+    And User filters the list of product by text "Name (Z to A)"
+    And User clicking "Test.allTheThings() T-Shirt (Red)" of item into a cart
+    Then User clicking "Sauce Labs Onesie" of item into a cart
 
   @negative
   Scenario: Remove item from cart
     Given User input "standard_user" as username "secret_sauce" as password
-    When User clicking various of items into a cart
-    Then User navigating to cart page
-    And User remove all item in cart
+    When User clicking "Test.allTheThings() T-Shirt (Red)" of item into a cart
+    And User navigating to cart page
+    Then User remove all item in cart

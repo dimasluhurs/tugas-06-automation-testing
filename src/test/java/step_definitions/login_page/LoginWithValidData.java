@@ -28,7 +28,7 @@ public class LoginWithValidData {
 
     @Then("User already on homepage")
     public void verifyAlreadyOnHomePage() {
-        Assert.assertTrue(loginPage.loginIsSuccessfull());
+        Assert.assertTrue(loginPage.loginIsSuccessful());
     }
 
 }

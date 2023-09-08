@@ -16,29 +16,29 @@ public class HomePage {
     }
 
     @FindBy(id = "react-burger-menu-btn")
-    private WebElement burgerMenu;
+    private WebElement buttonburgerMenu;
 
     @FindBy(id = "inventory_sidebar_link")
-    private WebElement allToCartsNav;
+    private WebElement linkSideAllItems;
 
     @FindBy(id = "react-burger-cross-btn")
-    private WebElement closeButton;
+    private WebElement buttonCloseBurgerMenu;
 
     @FindBy(css = ".shopping_cart_link")
-    private WebElement cart;
+    private WebElement buttonCart;
 
     @FindBy(id = "back-to-products")
-    private WebElement backToProduct;
+    private WebElement buttonBackToProduct;
 
     @FindBy(xpath = "//select[@class='product_sort_container']")
-    private WebElement filterSelect;
+    private WebElement selectFilter;
 
     public void clickAddToCart(String str) {
         webDriver.findElement(By.xpath("//*[text()='" + str + "']//ancestor::div[@class='inventory_item_label']//following-sibling::div[@class='pricebar']//button")).click();
     }
 
     public void filterItem(String filterSelect)  {
-        Select filter = new Select(this.filterSelect);
+        Select filter = new Select(this.selectFilter);
         filter.selectByVisibleText(filterSelect);
     }
 }

@@ -10,7 +10,7 @@ Feature: Checkout
     #Filter z to a
     And User filters the list of product by text "Name (Z to A)"
     #Adding Item
-    When User clicking "Test.allTheThings() T-Shirt (Red)" of item into a cart
+    And User clicking "Test.allTheThings() T-Shirt (Red)" of item into a cart
     And User clicking "Sauce Labs Onesie" of item into a cart
     #Going to cart page
     And User navigating to cart page
@@ -21,7 +21,7 @@ Feature: Checkout
     #Going to checkout page
     And User navigating to checkout page
     #Input firstName lastName and postalCode
-    When User filling "Arif" as firstName, "Laksonodhewo" as lastName and "12270" as postal code
+    And User filling "Arif" as firstName, "Laksonodhewo" as lastName and "12270" as postal code
     #Going to receipt page
     And User navigating to checkout overview page
     #VerifyingPayment
