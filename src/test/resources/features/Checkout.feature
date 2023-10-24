@@ -21,7 +21,7 @@ Feature: Checkout
     #Going to checkout page
     And User navigating to checkout page
     #Input firstName lastName and postalCode
-    And User filling "Arif" as firstName, "Laksonodhewo" as lastName and "12270" as postal code
+    And User filling "Dimas" as firstName, "Luhur" as lastName and "12345" as postal code
     #Going to receipt page
     And User navigating to checkout overview page
     #VerifyingPayment
